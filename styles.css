@@ -1,3 +1,4 @@
+/* Variaveis de design do tema claro. */
 :root {
     --bg: #f4efe7;
     --surface: rgba(255, 255, 255, 0.78);
@@ -14,6 +15,7 @@
     --radius-sm: 12px;
 }
 
+/* As mesmas variaveis sao sobrescritas para o tema escuro. */
 body.dark-theme {
     --bg: #171514;
     --surface: rgba(33, 30, 28, 0.88);
@@ -456,6 +458,7 @@ h2 {
     border-top: 1px solid var(--line);
 }
 
+/* Ajustes para tablet e mobile: grids em coluna e menu recolhivel. */
 @media (max-width: 920px) {
     .hero-grid,
     .content-grid,
@@ -503,6 +506,7 @@ h2 {
     }
 }
 
+/* Ajustes finais para telas pequenas. */
 @media (max-width: 640px) {
     .section {
         padding: 4.2rem 0;

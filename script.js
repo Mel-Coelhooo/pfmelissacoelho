@@ -6,6 +6,7 @@ const themeToggle = document.querySelector('.theme-toggle');
 const form = document.getElementById('contact-form');
 const feedback = document.getElementById('form-feedback');
 
+// Controla abertura/fechamento do menu mobile.
 function toggleMenu(forceClose = false) {
     if (!menuToggle || !navActions) {
         return;
@@ -18,15 +19,18 @@ function toggleMenu(forceClose = false) {
     navActions.classList.toggle('open', nextState);
 }
 
+// Aplica o tema e salva a preferencia no navegador.
 function applyTheme(theme) {
     body.classList.toggle('dark-theme', theme === 'dark');
     localStorage.setItem('portfolio-theme', theme);
 }
 
+// Valida formato basico de e-mail.
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+// Exibe retorno visual de erro ou sucesso no formulario.
 function showFeedback(message, type) {
     if (!feedback) {
         return;
@@ -71,6 +75,7 @@ form?.addEventListener('submit', (event) => {
         return;
     }
 
+    // Simulacao de envio: limpa campos e confirma para o usuario.
     form.reset();
     showFeedback('Mensagem enviada com sucesso!', 'success');
     window.alert('Mensagem enviada com sucesso!');
